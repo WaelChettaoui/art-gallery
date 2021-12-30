@@ -1,0 +1,20 @@
+{
+  "name": "mern-crud",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": ">=0.21.1",
+    "body-parser": "^1.18.2",
+    "dotenv": "^10.0.0",
+    "express": "^4.16.2",
+    "mongoose": ">=5.7.5",
+    "morgan": "^1.9.0",
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "start": "nodemon server"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
