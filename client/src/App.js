@@ -1,16 +1,21 @@
-import { Switch, BrowserRouter, Route } from "react-router-dom";
-import Home from "./components/Home/Home";
-import AddPainting from "./components/addPainting/AddPainting";
-import Navbar from "./components/navbar/Navbar";
+import logo from './logo.svg'
+import './App.css'
+import Gallery from './components/gallery/Gallery'
+import Form from './components/form/Form'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 function App() {
   return (
-    <BrowserRouter>
-    <Navbar/>
-      <div className="container">
+    <Router>
+      <div>
+        <div style={{ textAlign: 'center' }}>
+          <h1>Image Gallery</h1>
+        </div>
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/add" component={AddPainting} />
+          <Route path='/'>
+            <Form />
+            <Gallery />
+          </Route>
         </Switch>
       </div>
     </BrowserRouter>
