@@ -18,8 +18,8 @@ function App() {
           </Route>
         </Switch>
       </div>
-    </Router>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
