@@ -1,24 +1,23 @@
 import logo from './logo.svg'
 import './App.css'
 import Gallery from './components/gallery/Gallery'
-import Form from './components/form/Form'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import AddPainting from './components/addPainting/AddPainting'
+import EditPainting from './components/editPainting/editPainting'
+import Navbar from './navbar/Navbar'
 
 function App() {
   return (
     <Router>
-      <div>
-        <div style={{ textAlign: 'center' }}>
-          <h1>Image Gallery</h1>
-        </div>
+      <div className="container">
+        <Navbar/>
         <Switch>
-          <Route path='/'>
-            <Form />
-            <Gallery />
-          </Route>
+          <Route exact path="/" component={Gallery} />
+          <Route path="/add" component={AddPainting} />
+          <Route path="/edit/:id" component={EditPainting} />
         </Switch>
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
