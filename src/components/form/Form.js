@@ -5,32 +5,32 @@ import Gallery from '../gallery/Gallery'
 import Axios from 'axios'
 
 const Form = () => {
-  const [name, setName] = useState('')
-  const [artist, setArtist] = useState('')
-  const [year, setYear] = useState('')
-  const [paintings, setPaintings] = useState([])
+  // const [name, setName] = useState('')
+  // const [artist, setArtist] = useState('')
+  // const [year, setYear] = useState('')
+  // const [paintings, setPaintings] = useState([])
 
-  const uploadImage = (files) => {
-    console.log(files[0])
-  }
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const painting = { name: name, artist: artist, year: year }
-    setPaintings((paintings) => {
-      return [...paintings, painting]
-    })
-    setName('')
-    setArtist('')
-    setYear('')
-    console.log({ paintings })
-    // Axios.post('https://v2.convertapi.com/upload', { formData })
-    //   .then((res) => {
-    //     console.log(res)
-    //   })
-    //   .catch((error) => {
-    //     console.log(error)
-    //   })
-  }
+  // const uploadImage = (files) => {
+  //   console.log(files[0])
+  // }
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
+  //   const painting = { name: name, artist: artist, year: year }
+  //   setPaintings((paintings) => {
+  //     return [...paintings, painting]
+  //   })
+  //   setName('')
+  //   setArtist('')
+  //   setYear('')
+  //   console.log({ paintings })
+  //   // Axios.post('https://v2.convertapi.com/upload', { formData })
+  //   //   .then((res) => {
+  //   //     console.log(res)
+  //   //   })
+  //   //   .catch((error) => {
+  //   //     console.log(error)
+  //   //   })
+  // }
 
   return (
     <div className='update'>
