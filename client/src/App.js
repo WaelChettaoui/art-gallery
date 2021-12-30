@@ -1,24 +1,20 @@
-import logo from './logo.svg'
-import './App.css'
-import Gallery from './components/gallery/Gallery'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Switch, BrowserRouter, Route } from "react-router-dom";
+import Home from "./components/Home/Home";
+import AddPainting from "./components/addPainting/AddPainting";
+import Navbar from "./components/navbar/Navbar";
 
 function App() {
   return (
-    <Router>
-      <div>
-        <div style={{ textAlign: 'center' }}>
-          <h1>Image Gallery</h1>
-          <button>Upload</button>
-        </div>
+    <BrowserRouter>
+    <Navbar/>
+      <div className="container">
         <Switch>
-          <Route path='/'>
-            <Gallery />
-          </Route>
+          <Route exact path="/" component={Home} />
+          <Route path="/add" component={AddPainting} />
         </Switch>
       </div>
-    </Router>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
