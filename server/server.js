@@ -3,6 +3,7 @@ var path = require('path');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+const cors = require('cors');
 require('dotenv').config()
 mongoose.connect('mongodb://localhost/mern-crud')
   .then(() =>  console.log('Connected to the DB'))
@@ -15,7 +16,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
 app.use(express.static(path.join(__dirname, 'build')));
-
+app.use(cors());
 app.use('/api/v1/painting', paintingRoute);
 
 // catch 404 and forward to error handler
