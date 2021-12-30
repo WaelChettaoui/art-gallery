@@ -1,0 +1,27 @@
+{
+  "Paintings": [
+    {
+      "id": 1,
+      "artist": "'Picasso'",
+      "name": "'Guernica'",
+      "year": 1937,
+      "imgSrc": "https://www.worldatlas.com/r/w960-q80/upload/ca/27/70/shutterstock-337184468.jpg"
+    },
+
+    {
+      "id": 2,
+      "artist": "Johannes Vermeer",
+      "name": "'The Girl With the Pearl Earring'",
+      "year": 1665,
+      "imgSrc": "https://www.worldatlas.com/r/w960-q80/upload/9d/d2/c4/meisje-met-de-parel.jpg"
+    },
+
+    {
+      "id": 3,
+      "artist": "Edvar Munch",
+      "name": "The Screa,",
+      "year": 1893,
+      "imgSrc": "https://www.worldatlas.com/r/w960-q80/upload/5f/96/29/edvard-munch-1893-the-scream-oil-tempera-and-pastel-on-cardboard-91-x-73-cm-national-gallery-of-norway.jpg"
+    }
+  ]
+}
