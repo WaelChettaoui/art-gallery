@@ -71,21 +71,17 @@ Switch into the server folder and install the dependencies
   npm i
 ```
 
-Run the server
-```bash
-  npm start
-```
-
 Switch into the client folder and install the dependencies
 
 ```bash
-  cd client
+  cd ../client
   npm i
 ```
 
-Run the client
+Run the project
 ```bash
-  npm start
+  cd ..
+  npm run dev
 ```
 
 ## Authors
