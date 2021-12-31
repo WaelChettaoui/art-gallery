@@ -16,7 +16,8 @@
     "nodemon": "^2.0.15"
   },
   "scripts": {
-    "start": "nodemon server"
+    "start": "node server.js",
+    "server": "nodemon server.js"
   },
   "devDependencies": {
     "bootstrap": "^3.3.7"
