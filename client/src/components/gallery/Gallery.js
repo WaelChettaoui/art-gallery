@@ -37,7 +37,7 @@ const Gallery = () => {
             <h3>{painting.artist}</h3>
             <h3>{painting.year}</h3>
             <div className="d-flex justify-content-between align-items-center">
-              <Link to={`/edit/${painting._id}`} style={{ textDecoration: "none" }}>
+              <Link to={`${painting._id}`} style={{ textDecoration: "none" }}>
                 Edit
               </Link>
               <button
