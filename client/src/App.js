@@ -10,16 +10,16 @@ import Navbar from './components/navbar/Navbar'
 function App() {
   return (
     <Router>
-      <div className="container">
-        <Navbar/>
+      <div className='container'>
+        <Navbar />
         <Switch>
-          <Route exact path="/" component={Gallery} />
-          <Route path="/add" component={AddPainting} />
-          <Route path="/:id" component={EditPainting} />
+          <Route exact path='/' component={Gallery} />
+          <Route path='/add' component={AddPainting} />
+          <Route path='/:id' component={EditPainting} />
         </Switch>
       </div>
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App

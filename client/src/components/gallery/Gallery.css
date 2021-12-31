@@ -1,8 +1,8 @@
 .gallery {
   /* -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3; 
-  -webkit-column-width: 33%;
+  -moz-column-count: 3; */
+  /* column-count: 3; */
+  /* -webkit-column-width: 33%;
   -moz-column-width: 33%;
   column-width: 33%; */
   padding: 12px;
@@ -13,12 +13,16 @@
   justify-content: space-evenly;
 }
 
+.title {
+  text-align: center;
+}
 .gallery .image-wrapper {
   width: 300px;
   overflow: hidden;
   box-shadow: 0px 0px 15px -5px;
   /* padding: 12px; */
   margin: 20px;
+  text-align: center;
 }
 
 .gallery .pics img {

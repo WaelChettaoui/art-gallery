@@ -1,89 +1,84 @@
-import { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 
 const AddPainting = () => {
-  const history = useHistory();
+  const history = useHistory()
   const [data, setData] = useState({
-    name: "",
-    artist: "",
-    year: "",
-    paintingImg: "",
-  });
+    name: '',
+    artist: '',
+    year: '',
+    paintingImg: '',
+  })
   const handleChange = (name, artist, year) => (e) => {
-    const value = name === "paintingImg" ? e.target.files[0] : e.target.value;
-    setData({ ...data, [name]: value, [artist]: value ,
-    [year]: value,});
-  };
+    const value = name === 'paintingImg' ? e.target.files[0] : e.target.value
+    setData({ ...data, [name]: value, [artist]: value, [year]: value })
+  }
   const handleSubmit = async () => {
     try {
-      let formData = new FormData();
-      formData.append("paintingImg", data.paintingImg);
-      formData.append("name", data.name);
-      formData.append("artist", data.artist);
-      formData.append("year", data.year);
+      let formData = new FormData()
+      formData.append('paintingImg', data.paintingImg)
+      formData.append('name', data.name)
+      formData.append('artist', data.artist)
+      formData.append('year', data.year)
 
       const res = await fetch(`http://localhost:8000/api/v1/painting/`, {
-        method: "POST",
+        method: 'POST',
         body: formData,
-      });
+      })
       if (res.ok) {
-        setData({ name: "", paintingImg: "" , artist: "",
-        year: "",});
-        history.replace("/");
+        setData({ name: '', paintingImg: '', artist: '', year: '' })
+        history.replace('/')
       }
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
-  };
+  }
 
   return (
-    <div style={{ maxWidth: 500, margin: "auto" }}>
-      <div className="mb-3">
-        <input
-          className="form-control"
-          placeholder="Enter name"
-          type="text"
-          name="name"
-          value={data.name}
-          onChange={handleChange("name")}
-        />
-      </div>
-      <div className="mb-3">
-        <input
-          className="form-control"
-          placeholder="Enter artist"
-          type="text"
-          name="artist"
-          value={data.artist}
-          onChange={handleChange("artist")}
-        />
-      </div>
-      <div className="mb-3">
-        <input
-          className="form-control"
-          placeholder="Enter year"
-          type="text"
-          name="year"
-          value={data.year}
-          onChange={handleChange("year")}
-        />
-      </div>
-      <div className="mb-3">
-        <input
-          className="form-control"
-          type="file"
-          accept="image/*"
-          name="paintingImg"
-          onChange={handleChange("paintingImg")}
-        />
-      </div>
-      <div className="text-center">
-        <button className="btn btn-primary" onClick={handleSubmit}>
-          Submit
-        </button>
-      </div>
-    </div>
-  );
-};
+    <div className='create'>
+      <h2>Add New Painting</h2>
+      <label>Painting Name </label>
+      <input
+        className='form-control'
+        placeholder='Enter name'
+        type='text'
+        name='name'
+        value={data.name}
+        onChange={handleChange('name')}
+      />
+      <label>Artist Name</label>
+      <input
+        className='form-control'
+        placeholder='Enter artist'
+        type='text'
+        name='artist'
+        value={data.artist}
+        onChange={handleChange('artist')}
+      />
+      <label>Painting Year</label>
+      <input
+        className='form-control'
+        placeholder='Enter year'
+        type='text'
+        name='year'
+        value={data.year}
+        onChange={handleChange('year')}
+      />
 
-export default AddPainting;
+      <label>Painting Image</label>
+      <input
+        className='form-control'
+        type='file'
+        accept='image/*'
+        name='paintingImg'
+        onChange={handleChange('paintingImg')}
+      />
+
+      <button className='btn btn-primary' onClick={handleSubmit}>
+        Submit
+      </button>
+    </div>
+  )
+}
+
+export default AddPainting
