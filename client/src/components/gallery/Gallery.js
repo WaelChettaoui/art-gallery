@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import './Gallery.css'
+import Modal from '../modal/Modal'
 
 const Gallery = () => {
   const [paintings, setPaintings] = useState()
@@ -29,6 +30,7 @@ const Gallery = () => {
       console.log(error)
     }
   }
+
   return (
     <section>
       <h1 className='title'>Art Gallery </h1>
@@ -49,6 +51,7 @@ const Gallery = () => {
               <Link to={`${painting._id}`} style={{ textDecoration: 'none' }}>
                 Edit
               </Link>
+              <Modal />
               <button
                 className='btn btn-danger btn-sm'
                 onClick={() => handleDelete(painting._id)}

@@ -6,6 +6,7 @@ import Gallery from './components/gallery/Gallery'
 import AddPainting from './components/addPainting/AddPainting'
 import EditPainting from './components/editPainting/editPainting'
 import Navbar from './components/navbar/Navbar'
+import Modal from './components/modal/Modal'
 
 function App() {
   return (

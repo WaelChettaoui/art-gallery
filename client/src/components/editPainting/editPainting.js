@@ -11,6 +11,7 @@ const EditPainting = () => {
     year: '',
     paintingImg: '',
   })
+
   useEffect(() => {
     fetch(`http://localhost:8000/api/v1/painting/${id}`)
       .then((res) => res.json())
@@ -55,7 +56,7 @@ const EditPainting = () => {
         value={data.name}
         onChange={handleChange('name')}
       />
-      <label>Artist Name</label>
+      <label>Artist Name </label>
       <input
         className='form-control'
         placeholder='Enter artist'
