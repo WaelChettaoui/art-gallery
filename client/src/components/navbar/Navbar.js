@@ -1,27 +1,18 @@
 import { Link } from 'react-router-dom'
+import './Navbar.css'
 
 const Navbar = () => {
   return (
-    <nav className='navbar navbar-expand-lg navbar-dark bg-primary mb-5'>
-      <div className='container'>
-        <Link className='navbar-brand' to='/'>
-          CRUD
+    <nav className='navbar'>
+        <Link className='homePage' to='/'>
+          ART GALLERY
         </Link>
-        <div>
-          <ul className='navbar-nav ms-auto mb-2 mb-lg-0'>
-            <li className='nav-item'>
-              <Link className='nav-link' to='/add'>
-                Add Painting
-              </Link>
-            </li>
-            <li>
-              <Link className='nav-link' to='/:id'>
-                Edit painting
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
+        
+        <button>
+        <Link className='nav-link' to='/add'>
+          Add Painting
+        </Link>
+        </button>
     </nav>
   )
 }
