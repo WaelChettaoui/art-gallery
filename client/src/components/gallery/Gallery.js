@@ -31,7 +31,6 @@ const Gallery = () => {
   }
   return (
     <section>
-      <h1 className='title'>Art Gallery </h1>
       <div className='gallery'>
         {paintings?.map((painting) => (
           <div className='image-wrapper' key={painting._id}>
