@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 
-const EditPainting = ({ match }) => {
+const EditPainting = () => {
     
-    const id = useParams();
-  console.log(match);
+  const {id} = useParams();
+  console.log(id);
   const history = useHistory();
   const [data, setData] = useState({
     name: "",
@@ -92,6 +92,7 @@ const EditPainting = ({ match }) => {
         <button className="btn btn-primary" onClick={handleSubmit}>
           Edit
         </button>
+
       </div>
     </div>
   );

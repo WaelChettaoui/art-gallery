@@ -55,7 +55,7 @@ router.delete("/:id", async (req, res) => {
 
 
 // UPDATE PAINTING
-router.put("/:id", upload.single("image"), async (req, res) => {
+router.put("/:id", upload.single("paintingImg"), async (req, res) => {
   try {
     let painting = await Painting.findById(req.params.id);
     // Delete image from cloudinary
@@ -67,7 +67,9 @@ router.put("/:id", upload.single("image"), async (req, res) => {
     }
     const data = {
       name: req.body.name || painting.name,
-      avatar: result?.secure_url || painting.avatar,
+      artist: req.body.artist || painting.artist,
+      year: req.body.year || painting.year,
+      paintingImg: result?.secure_url || painting.paintingImg,
       cloudinary_id: result?.public_id || painting.cloudinary_id,
     };
     painting = await Painting.findByIdAndUpdate(req.params.id, data, { new: true });

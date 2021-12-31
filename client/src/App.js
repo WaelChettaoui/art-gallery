@@ -1,10 +1,11 @@
-import logo from './logo.svg'
 import './App.css'
-import Gallery from './components/gallery/Gallery'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
+// Importing components
+import Gallery from './components/gallery/Gallery'
 import AddPainting from './components/addPainting/AddPainting'
 import EditPainting from './components/editPainting/editPainting'
-import Navbar from './navbar/Navbar'
+import Navbar from './components/navbar/Navbar'
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Gallery} />
           <Route path="/add" component={AddPainting} />
-          <Route path="/edit/:id" component={EditPainting} />
+          <Route path="/:id" component={EditPainting} />
         </Switch>
       </div>
     </Router>
